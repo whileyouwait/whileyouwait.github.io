@@ -1,33 +1,35 @@
 :root{
-  --bg:#0b1220;
-  --card:#101a31;
+  --bg:#091931;
+  --card:#ffffff;
   --text:#e7ecff;
+  --text-dark:#122a50;
   --muted:#a6b0d8;
-  --accent:#6ea8fe;
-  --accent-2:#9bffd4;
+  --accent:#70b3fc;
+  --accent-2:#ffaa30;
   --radius:18px;
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
-  background: radial-gradient(1200px 600px at 70% -20%, #1b2a50 0%, var(--bg) 60%) fixed;
+  background: radial-gradient(1200px 600px at 70% -20%, #122a50 0%, var(--bg) 60%) fixed;
   color: var(--text);
   line-height:1.6;
 }
 .container{max-width: 880px; margin: 0 auto; padding: 40px 20px 80px;}
 .nav{display:flex; align-items:center; justify-content:space-between; margin-bottom:28px;}
 .brand{display:flex; gap:12px; align-items:center; text-decoration:none;}
-.logo{width:40px; height:40px; border-radius:12px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 6px 20px rgba(110,168,254,.35);}
+.logo{width:40px; height:40px; border-radius:12px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 6px 20px rgba(112,179,252,.35);}
 .brand span{font-weight:700; letter-spacing:.2px; color:var(--text)}
-.card{background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 28px; box-shadow: 0 10px 30px rgba(0,0,0,.25);}
+.card{background: linear-gradient(180deg, #ffffff, #f3f6ff); border:1px solid rgba(9,25,49,.08); border-radius: var(--radius); padding: 28px; box-shadow: 0 10px 30px rgba(9,25,49,.2); color:var(--text-dark);}
 .hero{
   display:grid; gap:18px; padding: 36px; border-radius: calc(var(--radius) + 6px);
   background:
-    radial-gradient(600px 240px at 20% -10%, rgba(110,168,254,.25), transparent 60%),
-    radial-gradient(800px 340px at 110% 10%, rgba(155,255,212,.18), transparent 60%),
+    radial-gradient(600px 240px at 20% -10%, rgba(112,179,252,.25), transparent 60%),
+    radial-gradient(800px 340px at 110% 10%, rgba(255,170,48,.20), transparent 60%),
     var(--card);
-  border:1px solid rgba(255,255,255,.08);
+  border:1px solid rgba(9,25,49,.08);
+  color:var(--text-dark);
 }
 .hero h1{margin:0; font-size:clamp(28px, 4.2vw, 44px); line-height:1.15}
 .hero p{margin:0; color:var(--muted); font-size:clamp(16px,2.2vw,18px)}
@@ -42,7 +44,7 @@ body{
 .badge{background:transparent; color:var(--text); border:1px dashed rgba(255,255,255,.18)}
 .grid{display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); margin-top:18px}
 .kv{display:flex; gap:10px; align-items:flex-start}
-.kv .dot{width:10px; height:10px; border-radius:50%; background:var(--accent); margin-top:.6rem}
+.kv .dot{width:10px; height:10px; border-radius:50%; background:var(--accent-2); margin-top:.6rem}
 .kv h3{margin:0 0 6px 0; font-size:18px}
 .kv p{margin:0; color:var(--muted)}
 .footer{margin-top:36px; color:var(--muted); font-size:14px; display:flex; gap:16px; flex-wrap:wrap; opacity:.85}
@@ -54,4 +56,5 @@ hr{border:0; height:1px; background:rgba(255,255,255,.08); margin:28px 0}
 .back{display:inline-block; margin-bottom:12px}
 .content p{margin:0 0 12px}
 .content h2{margin:18px 0 8px}
+.content strong{color:var(--accent-2);}
 ul.clean{padding-left:18px; margin: 10px 0}
